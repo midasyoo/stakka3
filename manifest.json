@@ -1,0 +1,17 @@
+{
+  "name": "STAKKA 3 — 무너지는 하늘",
+  "short_name": "STAKKA 3",
+  "description": "달이 갈라지며 하늘이 무너진다. 붕괴선보다 빨리 쌓아 올라가 균열 너머로 탈출하라.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#05030c",
+  "theme_color": "#05030c",
+  "lang": "ko",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

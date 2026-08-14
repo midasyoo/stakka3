@@ -1092,11 +1092,13 @@ function drawObstacle(o, sx, sy) {
 }
 
 /* ═══════════ 진단 오버레이 (?debug=1) ═══════════ */
-const BUILD = 'S3-1.2.0-volcano';
+const BUILD = 'S3-1.2.5-clean';
 const QS = (typeof location !== 'undefined' && location.search) || '';   // 테스트 샌드박스엔 location 이 없다
 const DEBUG = /[?&]debug=1/.test(QS);
 // ?lv=4 → 해당 레벨부터 시작 (테스트용). LV1 은 원래 방해물이 없다.
 const FORCE_LV = (() => { const m = /[?&]lv=(\d+)/.exec(QS); return m ? clamp(parseInt(m[1], 10) || 1, 1, 10) : 0; })();
+// ?autostart=1 → 부팅과 동시에 startGame() 호출 (헤드리스 스크린샷 캡처용, 탭 이벤트 없이 play 상태 진입)
+const AUTOSTART = /[?&]autostart=1/.test(QS);
 const $dbg = $('dbg');
 let dbgAcc = 0;
 if (DEBUG) $dbg.classList.add('on');
@@ -1128,6 +1130,12 @@ for (let i = 1; i <= 5; i++) { const p = blocks[blocks.length - 1];
 snapCam();
 updateHUD();
 $hud.style.opacity = '0';
+if (AUTOSTART) {
+  startGame();
+  // 헤드리스 캡처 시 CSS 트랜지션이 가상 시간(virtual-time-budget)을 못 따라가 메뉴 패널이
+  // 안 사라진 채로 찍히는 문제가 있었다 — 트랜지션을 꺼서 즉시 반영되게 한다.
+  [$menu, $over, $win].forEach(el => { el.style.transition = 'none'; el.classList.remove('show'); });
+}
 requestAnimationFrame(t => { lastT = t; requestAnimationFrame(frame); });
 })();
 </script>

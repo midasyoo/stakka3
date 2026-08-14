@@ -101,6 +101,19 @@ https://midasyoo.github.io/stakka3/
 
 ---
 
+## 스크린샷
+
+<p float="left">
+  <img src="screenshots/1-menu.png" width="200">
+  <img src="screenshots/2-play-lv2.png" width="200">
+  <img src="screenshots/3-play-lv5-volcano.png" width="200">
+  <img src="screenshots/4-play-lv10-final.png" width="200">
+</p>
+
+메뉴 · 잿빛 박쥐떼(LV2) · 부유 잔해 + 해저 화산(LV5) · **균열의 문 파이널(LV10)**
+
+---
+
 ## 직접 실행하기
 
 ```bash
@@ -120,6 +133,7 @@ cd stakka3 && python -m http.server 8000
 |---|---|
 | `?debug=1` | 화면 하단에 상태 오버레이(붕괴선 gap·위험도 등) 표시 |
 | `?lv=N` | 해당 레벨(1~10)부터 바로 시작 |
+| `?autostart=1` | 탭 없이 부팅과 동시에 바로 play 상태로 진입 (헤드리스 스크린샷 캡처용) |
 
 ---
 

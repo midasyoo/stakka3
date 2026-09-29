@@ -14,6 +14,13 @@
 
 ---
 
+## 홍보 영상 (1분)
+
+https://github.com/midasyoo/stakka/raw/main/stakka-trilogy-1min.mp4
+
+3부작을 한 편에 담은 소개 영상입니다 (내레이션·배경음 포함).
+원본과 제작 도구는 [1편 저장소](https://github.com/midasyoo/stakka/tree/main/tools/promo)에 있습니다.
+
 ## 게임 소개
 
 **STAKKA 2** 에서 별이 달에 닿은 순간, 그 충격으로 달이 갈라졌다.
